@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=width=device-width, initial-scale=1">
     <title>instanews </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css" media="screen">
   </head>
-  <body>
+  <body >
+    <header class="container">
+       <img src="assets/images/nyt-logo.svg" alt="NewYorkTimes Logo"/>
+       <form class="search-form" action="#" method="POST">
+         <p>choose a selection:</p>
+         <select name="sections" id="sections">
+           <option value>sections...</option>
+           <option value><a href="about.html">home</a></option>
+           <option value>arts</option>
+           <option value>business</option>
+           <option value>sports</option>
+           <option value>technology</option>
+           <option value>fashion</option>
+        </select>
+      </form>
+      <p>@copyright 2016 instanews</p> 
 
+       
+    </header>  
 
   <script src="lib/jquery-3.2.1.min.js"></script>
-  <script src="main.js">  </script>
+  <script src="build/js/main.min.js">  </script>
   </body>
 </html>  

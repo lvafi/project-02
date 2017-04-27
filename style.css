@@ -1,0 +1,23 @@
+/*.container {
+   display: flex;
+   flex-direction: column;
+}*/
+body {
+    background-color: #000;
+    color: #fff;
+    
+}
+.container{
+  display: flex; 
+  flex-direction: column;
+   
+}
+.container img {
+  justify-content: center;
+}
+.search-form {
+  justify-content: center;
+}
+p {
+  color: white;
+}
