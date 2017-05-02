@@ -1,0 +1,210 @@
+
+body {
+    background-color:black;
+    color: #fff;
+}
+.container{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  @include tablet {
+        height: 30rem;
+        flex-direction: row;
+        @include desktop {
+            height: 30rem;
+            justify-content: flex-start;
+        }
+    }
+@keyframes nyt-animation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(20px, -5px);
+    }
+}
+@keyframes nyt-animate-tablet {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(-10px, 5px);
+    }
+}    
+}
+.nyt-image {
+    vertical-align: middle;
+    width: auto;
+    height: 220px;
+    text-align: center;
+    animation-name: nyt-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    max-width: 100%;
+    @include tablet {
+        width: 23%;
+        height: auto;
+        animation-name: nyt-animate-tablet;
+        margin-right: 10px;
+        margin-left: 90px;
+        @include desktop {
+            height: 220px;
+        }
+    }
+} 
+
+.sections {
+    font-size: 1.1rem;
+    display: block;
+    width: 100;
+    font-family: 'oslight', sans-serif;
+    transition: all ease 0.2s;
+} 
+.section-text {
+  color: #ffffff;
+    font-size: 16px;
+    font-family:'open_sanslight', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 17px;
+    text-align: center;
+    
+}
+
+.nav-wrapper {
+    animation-name: navanimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    ;
+    @include tablet {
+        animation-name: navanimatetablet;
+        margin-right: 200px;
+    }
+} 
+.shrink-image {
+    width: 150px;
+    height: 150px;
+    @include tablet {
+        width: 67px;
+        height: 67px;
+        @include desktop {
+            margin-left: 30px;
+        }
+    }
+}
+.nav-article-load {
+    margin-left: 70px;
+}
+.header-shift-with-articles {
+    height: auto;
+    padding-top: 30px;
+}
+
+
+
+.article-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    top: 55px;
+    position: relative;
+  @include tablet {
+    flex-direction: row;
+   }
+}
+.article-item {
+    flex-direction: row;
+    flex-basis: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    flex-grow: 1;
+    @include tablet {
+        flex-basis: 50%;
+        @include desktop {
+            flex-basis: 25%;
+            height: 420px;
+        }
+    }
+}    
+
+.content-container {
+    height: 100%;
+    width: 100%;
+    height: 400px;
+    @include tablet { 
+      height: 420px;
+     @include desktop {
+        height: 420px;
+        object-fit: cover;
+       }
+    }
+}
+.content-text {
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: block;
+    background-color: rgba(0, 0, 0, .6);
+    background-size: 100%, 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 1rem;
+    height: 0;
+    transition: height 0.2s linear;
+    color: white;
+    padding-top: 10px;
+}
+li:hover .content-text {
+    height: 30%;
+}
+.preloader img {
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+
+footer {
+  color: white;
+  position: relative;
+    top: 85px;
+    display: flex;
+    justify-content: center;
+    @include desktop {
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+}
+.copyright {
+    color: #c2c2c2;
+    top: 15px;
+    text-align: center;
+    font-family: 'opensans', sans-serif;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 0;
+    @include tablet {
+        top: 15px;
+    }
+    @include desktop {
+        text-align: left;
+    }
+}
+.instacaps {
+    text-transform: uppercase;
+}

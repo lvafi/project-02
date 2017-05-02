@@ -1,5 +1,7 @@
 # Ignore system files
 .DS_Store
+# Ignore system files
+.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
